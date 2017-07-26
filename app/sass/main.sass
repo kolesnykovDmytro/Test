@@ -1,0 +1,112 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+a
+	display: block
+	color: inherit
+	cursor: url(../img/cursor.png), pointer;
+	transition: .5s
+	text-transform: uppercase
+
+	&:hover
+		color: $hover-color
+		text-decoration: none
+
+nav, p, h1, button
+	margin: 0
+	padding: 0
+	list-style: none
+	border: 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: +bold
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.container-wrap
+	background: url(../img/bg.png) no-repeat top center
+	background-size: cover
+
+.container-inner
+	max-width: 1150px
+	margin: 0 auto
+	padding: 10px 10px 0
+	.header
+		display: flex
+		flex-wrap: wrap
+		color: #fff
+		.header__contact
+			flex-grow: 1
+			.phone
+				margin-bottom: 30px
+				color: $default-color
+				&:hover
+					color: #fff
+			.mail
+				background: url(../img/sprite.png) -5px -5px no-repeat
+				max-width: 169px
+				height: 64px
+
+		.header__menu
+			flex-grow: 2
+			.menu-list
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+				height: 100%
+
+.content
+	margin-top: 95px
+	text-align: center
+	.content__title
+		+black
+		font-size: 3rem
+		margin-bottom: 45px
+	.content__btn
+		background: $default-color
+		width: 210px
+		height: 48px
+		line-height: 48px
+		text-align: center
+		color: #000
+		+black
+		font-size: 16px
+		text-transform: uppercase
+
+
+@import "media" // Всегда в конце
